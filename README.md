@@ -63,4 +63,3 @@ To interact with the contracts:
 - [OpenZeppelin Docs](https://docs.openzeppelin.com/contracts/4.x/erc20)
 - [Foundry Book](https://book.getfoundry.sh/)
 ```
-
