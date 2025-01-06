@@ -24,7 +24,7 @@ contract OpenZepsTokenTest is Test {
 
     }
 
-    function testBobBalance() public {
+    function testBobBalance() public view {
         assertEq(STARTING_BALANCE, zepsToken.balanceOf(bob));
     }
 
@@ -39,5 +39,8 @@ contract OpenZepsTokenTest is Test {
 
         vm.prank(alice);
         zepsToken.transferFrom(bob, alice, transferAmount);
+
+        assertEq(zepsToken.balanceOf(alice), transferAmount);
+        assertEq(zepsToken.balanceOf(bob), STARTING_BALANCE - transferAmount);
     }
 }
