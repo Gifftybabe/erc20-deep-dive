@@ -1,66 +1,66 @@
-## Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+```markdown
+# ERC20 Deep Dive
 
-Foundry consists of:
+A foundational exploration of ERC20 token implementation using Foundry, focusing on understanding core functionalities and testing practices.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Overview
 
-## Documentation
+This project implements the ERC20 token standard with:
+- Token transfers and allowances
+- Balance tracking
+- Standard ERC20 interface functions
+- Comprehensive test coverage
 
-https://book.getfoundry.sh/
+## Technologies
 
-## Usage
+- Solidity ^0.8.26
+- Foundry
+- OpenZeppelin Contracts
 
-### Build
+## Setup
 
-```shell
-$ forge build
+1. Clone the repository
+```bash
+git clone <your-repo-url>
 ```
 
-### Test
-
-```shell
-$ forge test
+2. Install dependencies
+```bash
+forge install
 ```
 
-### Format
-
-```shell
-$ forge fmt
+3. Run tests
+```bash
+forge test
 ```
 
-### Gas Snapshots
+## Contract Features
 
-```shell
-$ forge snapshot
+- Basic ERC20 implementation
+- Transfer functionality
+- Allowance system
+- Balance checks
+- Standard events
+
+## Testing
+
+Tests cover core ERC20 functionalities:
+- Token transfers
+- Allowance mechanics
+- Balance updates
+- Edge cases
+
+## Getting Started
+
+To interact with the contracts:
+1. Deploy using the deployment script
+2. Use contract functions via your preferred method (CLI, script, frontend)
+
+## Learning Resources
+
+- [ERC20 Standard](https://eips.ethereum.org/EIPS/eip-20)
+- [OpenZeppelin Docs](https://docs.openzeppelin.com/contracts/4.x/erc20)
+- [Foundry Book](https://book.getfoundry.sh/)
 ```
 
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
